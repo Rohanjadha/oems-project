@@ -1,0 +1,28 @@
+<mat-card class="p-3">
+    <h1>Update-Categories</h1>
+    <mat-card-content>
+        <div class="container m-4">
+            <div class="row justify-content-center">
+                <div class="col-8">
+                    <form class="row justify-content-center" [formGroup]="updateCatForm" (ngSubmit)="updateCatData()">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Category Id</mat-label>
+                            <input type="text" formControlName="category_id" matInput name="category_id">
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Category List</mat-label>
+                            <input type="text" formControlName="title" matInput name="title">
+                        </mat-form-field>
+                         <mat-form-field appearance="outline">
+                            <mat-label>Category Description</mat-label>
+                            <textarea type="text"  formControlName="description" matInput name="description" cols="80" rows="10"></textarea>
+                        </mat-form-field>
+                        <div class="text-center">
+                            <button mat-raised-button color="primary">Update Category</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

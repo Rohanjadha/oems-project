@@ -1,0 +1,31 @@
+<mat-card>
+<h1>Question Of {{quizTitle | uppercase}}</h1>
+<div class="container" *ngFor="let question of getAllQuestion; let i = index" >
+    <p><b>{{i+1}}){{question.content}} </b></p>
+    <div class="row mt-3">
+        <div class="col-md-5 mt-2">
+            <p><b>A)</b>{{question.option1}}</p>
+        </div>  
+        <div class="col-md-6 mt-2">
+            <p><b>B)</b>{{question.option2}}</p>
+        </div>
+        <div class="col-md-5 mt-2">
+            <p><b>C)</b>{{question.option3}}</p>
+        </div>
+        <div class="col-md-6 mt-2">
+            <p><b>D)</b>{{question.option4}}</p>
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="mt-4">
+    <span><b>Correct Answer: </b>{{question.answer}}</span>
+</div>
+<div class="container mt-4  m-3">
+  <button mat-raised-button color="accent" class="mx-4" [routerLink]="['/admin-dashboard/admin-updatequestion/' +question.question_id + '/' +question.quiz.title]">Update</button>
+  <button mat-raised-button color="warn" (click)="deleteQuestion(question.question_id)">Delete</button>
+</div>
+</div>
+</mat-card>
+<div class="conatiner text-center mt-5">
+    <button mat-raised-button color="primary" [routerLink]="['/admin-dashboard/add-question/' +quizId + '/' +quizTitle]">Add Question</button>
+</div>

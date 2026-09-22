@@ -1,0 +1,19 @@
+<mat-card class="sidebar">
+    <div class="text-center">
+        <img class="img-fluid w-50" src="https://cdn-icons-png.flaticon.com/512/1642/1642473.png" alt="">
+    </div>
+    <button class="example-menu-item rounded" routerLink="/user-dashboard" cdkMenuItem><mat-icon
+            mat-list-icon>home</mat-icon>Home</button>
+
+    <button routerLink="/user-dashboard/user-profile" class="example-menu-item rounded" cdkMenuItem><mat-icon
+            mat-list-icon>account_circle</mat-icon>Profile</button>
+
+            <button [routerLink]="['/user-dashboard/'+0]" class="example-menu-item rounded" cdkMenuItem><mat-icon
+                mat-list-icon>quiz</mat-icon>All Quiz</button>
+
+
+            <button *ngFor="let category of allCategory" [routerLink]="['/user-dashboard/'+category.category_id]" class="example-menu-item rounded" cdkMenuItem><mat-icon
+                mat-list-icon>category</mat-icon>{{category.title}}</button>
+
+    <button class="example-menu-item rounded" cdkMenuItem><mat-icon mat-list-icon>logout</mat-icon>Log Out</button>
+</mat-card>

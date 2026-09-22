@@ -1,0 +1,23 @@
+<div class="container-fluid login shadow w-75 ">
+    <div class="row justify-content-center">
+        <div class="col-4" id="for-img">
+            <img src="https://account.asus.com/img/login_img02.png" alt="img">
+        </div>
+        <div class="col-7">
+            <form class="row justify-content-center" [formGroup]="logIn" (ngSubmit)="submitLoginData()">&nbsp;&nbsp;
+            <h1 class="text-center" style="color: blueviolet;">Login-Form</h1>
+            <div class="col-md-10">
+                <label class="m-2" for="">UserName :</label>
+                <input type="text" name="username" formControlName="username" class="form-control" placeholder="Enter UserName">
+            </div>
+            <div class="col-md-10">
+                <label  class="m-2" for="">Password :</label>
+                <input type="password" name="password" formControlName="password" class="form-control" placeholder="Enter Password">
+            </div>
+            <div class="col-md-10 mt-5 text-center">
+                <button class="w-25 btn btn-danger border border-dark">Submit</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>

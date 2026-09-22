@@ -1,0 +1,37 @@
+
+<div class="container-fluid reg">
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <form class="row justify-content-center shadow" [formGroup]="regIn" (ngSubmit)="regLogin()">&nbsp;
+            <h1 class="text-center" style="color: rgb(16, 202, 223);">Registration-Form</h1>
+            <div class="col-md-10">
+                <label class="m-2" for="">UserName :</label>
+                <input type="text" name="username" formControlName="username" class="form-control" placeholder="Enter UserName">
+            </div>
+            <div class="col-md-10">
+                <label  class="m-2" for="">Password :</label>
+                <input type="text" name="password" formControlName="password" class="form-control" placeholder="Enter Password">
+            </div>
+            <div class="col-md-10">
+                <label  class="m-2" for="">FirstName :</label>
+                <input type="text" name="firstname" formControlName="firstname" class="form-control" placeholder="Enter FirstName">
+            </div>
+            <div class="col-md-10">
+                <label  class="m-2" for="">LastName :</label>
+                <input type="text" name="lastname" formControlName="lastname" class="form-control" placeholder="Enter lastname">
+            </div>
+            <div class="col-md-10">
+                <label  class="m-2" for="">Email :</label>
+                <input type="email" name="email" formControlName="email" class="form-control" placeholder="Enter Email">
+            </div>
+            <div class="col-md-10">
+                <label  class="m-2" for="">Phone :</label>
+                <input type="number" name="phone" formControlName="phone" class="form-control" placeholder="Enter phone Number">
+            </div>
+            <div class="col-md-10 mt-5">
+                <button class="w-100 btn btn-secondary border border-dark">Submit</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>

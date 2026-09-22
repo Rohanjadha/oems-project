@@ -1,0 +1,48 @@
+<h1 class=" mt-3">All Quizzes</h1>
+<mat-card *ngFor="let quiz of getAllQuizz">
+  <mat-card-header>
+    <mat-card-title> <mat-icon >laptop</mat-icon>&nbsp;&nbsp;{{quiz.title | uppercase}}</mat-card-title>
+    <mat-card-subtitle>{{quiz.description | uppercase}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    Add Question From Here
+  </mat-card-content>
+  <div class="container text-center mt-1 p-4">
+    <button mat-raised-button color="primary" [routerLink]="['/admin-dashboard/admin-viewquestion/'+quiz.quiz_id + '/' + quiz.title]">Questions</button>&nbsp;&nbsp;&nbsp;
+    <button mat-raised-button>Max Marks:{{quiz.maxMarks}}</button>&nbsp;&nbsp;&nbsp;
+    <button mat-raised-button>Number of Questions: {{quiz.numberOfQuestions}}</button>&nbsp;&nbsp;&nbsp;
+    <button mat-raised-button color="primary" [routerLink]="['/admin-dashboard/admin-update-quiees/'+quiz.quiz_id]">Update</button>&nbsp;&nbsp;&nbsp;
+    <button mat-raised-button color="primary">Attempts</button>&nbsp;&nbsp;&nbsp;
+    <button mat-raised-button color="warn" (click)="deleteQuizById(quiz.quiz_id)">Delete</button>&nbsp;&nbsp;&nbsp;
+  </div>
+
+</mat-card>
+
+<div class="text-center m-5">
+  <button mat-raised-button color="primary" routerLink="/admin-dashboard/add-quiees">Add Quiz</button>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+

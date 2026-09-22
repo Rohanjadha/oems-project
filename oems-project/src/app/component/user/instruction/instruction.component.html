@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <mat-card>
+                <mat-card-title>
+                    <h1 class="text-center m-1">!! Read the instuctions of this page carefully !!</h1>
+                </mat-card-title>
+                <mat-card-content class="mt-5">
+                    <h2>{{quizes.title}}</h2>
+                    <p>{{quizes.description}}</p>
+                    <mat-divider></mat-divider>
+                    <h2>Important Instructions:</h2>
+                    <ul>
+                        <li>This quiz is only for Exam purpse.</li>
+                        <li>Read carefully all questions and give answer.</li>
+                        <li>You have to submit quiz with in 6 Minutes</li>
+                        <li>You can attempt the quiz any number of time.</li>
+                        <li>Thre are <b>{{quizes.numberOfQuestions}}</b> questions in this quiz</li>
+                        <li>Each questions carries <b>{{quizes.maxMarks/quizes.numberOfQuestions}}</b> Marks. No negative Marking for wrong one</li>
+                        <li>All questions is of MCQ Types.</li>
+                    </ul>
+                    <h2>Attempting Quiz</h2>
+                    <ul>
+                        <li>Click Start Quiz button to start the quiz</li>
+                        <li>The time will start the moment you click the Start Test button</li>
+                        <li>You can not resume this quiz,if interrupted due to any reason</li>
+                        <li>Scroll downl to move to next question.</li>
+                        <li>Click on Submit quiz button on completion of the quiz.</li>
+                        <li>Report of the test is automatically generated in the Form of PDF copy</li>
+                    </ul>
+                </mat-card-content>
+                <div class="container m-3">
+                    <button mat-raised-button color="accent" class="mt-2" (click)="startExam()">Start Exam</button>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>

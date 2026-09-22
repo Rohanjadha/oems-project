@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <mat-card>
+            <div class="row justify-content-center mt-5">
+                <div class="col-6">
+                    <div class="text-center">
+                        <img class="rounded"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxCrgWSayYrKu-nMuVPHgrVTyVEUJ-f8dnRw&usqp=CAU"
+                            alt="img">
+                        <h1>{{userData.firstname}} {{userData.lastname}}</h1>
+                    </div>
+                </div>
+                <div class="col-12 justify-content-center">
+                    <div class="p-2 mt-5">
+                        <table class="table table-striped table-hover text-center">
+                            <tbody>
+                                <tr>
+                                    <th>User Name</th>
+                                    <td>{{userData.username}}</td>
+                                </tr>
+                                <tr>
+                                    <th>User Id</th>
+                                    <td>{{userData.id}}</td>
+                                </tr>
+                                <tr>
+                                    <th>User Role</th>
+                                    <td>{{userData.authorities[0].authority}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Active</th>
+                                    <td>{{userData.enabled}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Phone No</th>
+                                    <td>{{userData.phone}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class=" m-2 p-1 text-center">
+                    <a class="btn btn-primary">Update</a>&nbsp;&nbsp;
+                    <a class="btn btn-danger">Share</a>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+</div>

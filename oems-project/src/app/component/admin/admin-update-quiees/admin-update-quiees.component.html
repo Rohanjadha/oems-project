@@ -1,0 +1,49 @@
+<!-- <p>admin-update-quiees works!</p> -->
+
+<div class="container">
+    <mat-card class="p-4">
+        <h1 class="mx-5">Update quizees</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form action="" class="row justify-content-center" [formGroup]="updateQuizzForm"
+                    (ngSubmit)="updateFormData()">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Quize Title</mat-label>
+                        <input type="text" formControlName="title" name="title" [ngModel]="getQuiz.title" matInput>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Quize Description</mat-label>
+                        <textarea type="text" formControlName="description" [ngModel]="getQuiz.description" name="description" rows="3"
+                            matInput></textarea>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="col-md-6">
+                        <mat-label>Max Marks</mat-label>
+                        <input type="text" formControlName="maxMarks" [ngModel]="getQuiz.maxMarks" name="maxMarks" matInput>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="col-md-6">
+                        <mat-label>Number Of Question</mat-label>
+                        <input type="text" formControlName="numberOfQuestions" [ngModel]="getQuiz.numberOfQuestions" name="numberOfQuestions" matInput>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Category Id</mat-label>
+                        <mat-select formControlName="category_id" name="category_id" [ngModel]="getQuiz.category.category_id">
+                            <mat-option *ngFor="let category of getAllCategory" [value]="category.category_id">{{category.title}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <mat-slide-toggle formControlName="active" [ngModel]="getQuiz.active" name="active">
+                        Publish Status
+                    </mat-slide-toggle>
+
+                    <div class="text-center mt-5">
+                        <button mat-raised-button color="accent">Update Quizzes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </mat-card>
+</div>
